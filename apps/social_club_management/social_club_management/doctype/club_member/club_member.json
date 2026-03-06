@@ -1,0 +1,293 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-06 14:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "member_details_section",
+  "member_id",
+  "first_name",
+  "middle_name",
+  "last_name",
+  "email",
+  "phone",
+  "mobile_no",
+  "gender",
+  "date_of_birth",
+  "nationality",
+  "emergency_contact_name",
+  "emergency_contact_phone",
+  "photo",
+  "membership_section",
+  "membership_type",
+  "membership_tier",
+  "membership_status",
+  "join_date",
+  "expiry_date",
+  "family_account",
+  "primary_member",
+  "family_members",
+  "financial_section",
+  "credit_limit",
+  "account_balance",
+  "referral_member",
+  "referral_bonus",
+  "system_section",
+  "created_by",
+  "modified_by",
+  "creation_date",
+  "modified_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "member_details_section",
+   "fieldtype": "Section Break",
+   "label": "Member Details"
+  },
+  {
+   "fieldname": "member_id",
+   "fieldtype": "Data",
+   "label": "Member ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality"
+  },
+  {
+   "fieldname": "emergency_contact_name",
+   "fieldtype": "Data",
+   "label": "Emergency Contact Name"
+  },
+  {
+   "fieldname": "emergency_contact_phone",
+   "fieldtype": "Data",
+   "label": "Emergency Contact Phone"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "membership_section",
+   "fieldtype": "Section Break",
+   "label": "Membership Information"
+  },
+  {
+   "fieldname": "membership_type",
+   "fieldtype": "Link",
+   "label": "Membership Type",
+   "options": "Membership Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "membership_tier",
+   "fieldtype": "Select",
+   "label": "Membership Tier",
+   "options": "Individual\nFamily\nCorporate\nVIP",
+   "reqd": 1,
+   "default": "Individual"
+  },
+  {
+   "fieldname": "membership_status",
+   "fieldtype": "Select",
+   "label": "Membership Status",
+   "options": "Active\nExpired\nSuspended\nPending",
+   "reqd": 1,
+   "default": "Pending"
+  },
+  {
+   "fieldname": "join_date",
+   "fieldtype": "Date",
+   "label": "Join Date",
+   "reqd": 1,
+   "default": "Today"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "family_account",
+   "fieldtype": "Link",
+   "label": "Family Account",
+   "options": "Club Member"
+  },
+  {
+   "fieldname": "primary_member",
+   "fieldtype": "Check",
+   "label": "Primary Member"
+  },
+  {
+   "fieldname": "family_members",
+   "fieldtype": "Table",
+   "label": "Family Members",
+   "options": "Family Member"
+  },
+  {
+   "fieldname": "financial_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Information"
+  },
+  {
+   "fieldname": "credit_limit",
+   "fieldtype": "Currency",
+   "label": "Credit Limit",
+   "options": "AED",
+   "default": 0
+  },
+  {
+   "fieldname": "account_balance",
+   "fieldtype": "Currency",
+   "label": "Account Balance",
+   "options": "AED",
+   "default": 0,
+   "read_only": 1
+  },
+  {
+   "fieldname": "referral_member",
+   "fieldtype": "Link",
+   "label": "Referral Member",
+   "options": "Club Member"
+  },
+  {
+   "fieldname": "referral_bonus",
+   "fieldtype": "Currency",
+   "label": "Referral Bonus",
+   "options": "AED",
+   "default": 0,
+   "read_only": 1
+  },
+  {
+   "fieldname": "system_section",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modified_by",
+   "fieldtype": "Data",
+   "label": "Modified By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modified_date",
+   "fieldtype": "Datetime",
+   "label": "Modified Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-06 14:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Social Club Management",
+ "name": "Club Member",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Membership Coordinator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 0,
+   "role": "Member",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

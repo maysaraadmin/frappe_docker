@@ -1,0 +1,227 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-06 14:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_details_section",
+  "facility_name",
+  "facility_code",
+  "facility_type",
+  "description",
+  "location",
+  "capacity",
+  "pricing_section",
+  "member_rate",
+  "non_member_rate",
+  "vip_rate",
+  "booking_rules_section",
+  "max_booking_window_days",
+  "max_booking_duration_hours",
+  "cancellation_policy_hours",
+  "cancellation_fee_percentage",
+  "maintenance_section",
+  "maintenance_schedule",
+  "availability_section",
+  "operating_hours",
+  "is_available",
+  "system_section",
+  "created_by",
+  "modified_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Details"
+  },
+  {
+   "fieldname": "facility_name",
+   "fieldtype": "Data",
+   "label": "Facility Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "facility_code",
+   "fieldtype": "Data",
+   "label": "Facility Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "facility_type",
+   "fieldtype": "Link",
+   "label": "Facility Type",
+   "options": "Facility Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "label": "Capacity",
+   "default": 1
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "member_rate",
+   "fieldtype": "Currency",
+   "label": "Member Rate (AED/hour)",
+   "options": "AED",
+   "reqd": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "non_member_rate",
+   "fieldtype": "Currency",
+   "label": "Non-Member Rate (AED/hour)",
+   "options": "AED",
+   "reqd": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "vip_rate",
+   "fieldtype": "Currency",
+   "label": "VIP Rate (AED/hour)",
+   "options": "AED",
+   "default": 0
+  },
+  {
+   "fieldname": "booking_rules_section",
+   "fieldtype": "Section Break",
+   "label": "Booking Rules"
+  },
+  {
+   "fieldname": "max_booking_window_days",
+   "fieldtype": "Int",
+   "label": "Max Booking Window (Days)",
+   "default": 7
+  },
+  {
+   "fieldname": "max_booking_duration_hours",
+   "fieldtype": "Int",
+   "label": "Max Booking Duration (Hours)",
+   "default": 2
+  },
+  {
+   "fieldname": "cancellation_policy_hours",
+   "fieldtype": "Int",
+   "label": "Cancellation Policy (Hours)",
+   "default": 24
+  },
+  {
+   "fieldname": "cancellation_fee_percentage",
+   "fieldtype": "Percent",
+   "label": "Cancellation Fee (%)",
+   "default": 50
+  },
+  {
+   "fieldname": "maintenance_section",
+   "fieldtype": "Section Break",
+   "label": "Maintenance Schedule"
+  },
+  {
+   "fieldname": "maintenance_schedule",
+   "fieldtype": "Table",
+   "label": "Maintenance Schedule",
+   "options": "Maintenance Schedule"
+  },
+  {
+   "fieldname": "availability_section",
+   "fieldtype": "Section Break",
+   "label": "Availability"
+  },
+  {
+   "fieldname": "operating_hours",
+   "fieldtype": "Table",
+   "label": "Operating Hours",
+   "options": "Operating Hours"
+  },
+  {
+   "fieldname": "is_available",
+   "fieldtype": "Check",
+   "label": "Is Available",
+   "default": 1
+  },
+  {
+   "fieldname": "system_section",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modified_by",
+   "fieldtype": "Data",
+   "label": "Modified By",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-06 14:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Social Club Management",
+ "name": "Facility",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Facility Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 0,
+   "role": "Member",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

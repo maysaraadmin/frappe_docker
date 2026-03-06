@@ -1,0 +1,187 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-06 14:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_details_section",
+  "membership_name",
+  "description",
+  "membership_tier",
+  "annual_fee",
+  "billing_cycle",
+  "privileges_section",
+  "facility_access",
+  "event_discount",
+  "f_and_b_discount",
+  "guest_privileges",
+  "credit_limit",
+  "renewal_settings",
+  "renewal_reminder_days",
+  "grace_period_days",
+  "suspension_rules",
+  "system_section",
+  "is_active",
+  "created_by",
+  "modified_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Details"
+  },
+  {
+   "fieldname": "membership_name",
+   "fieldtype": "Data",
+   "label": "Membership Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "membership_tier",
+   "fieldtype": "Select",
+   "label": "Membership Tier",
+   "options": "Individual\nFamily\nCorporate\nVIP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "annual_fee",
+   "fieldtype": "Currency",
+   "label": "Annual Fee (AED)",
+   "options": "AED",
+   "reqd": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "billing_cycle",
+   "fieldtype": "Select",
+   "label": "Billing Cycle",
+   "options": "Monthly\nQuarterly\nSemi-Annual\nAnnual",
+   "reqd": 1,
+   "default": "Annual"
+  },
+  {
+   "fieldname": "privileges_section",
+   "fieldtype": "Section Break",
+   "label": "Privileges & Benefits"
+  },
+  {
+   "fieldname": "facility_access",
+   "fieldtype": "Table",
+   "label": "Facility Access",
+   "options": "Facility Access"
+  },
+  {
+   "fieldname": "event_discount",
+   "fieldtype": "Percent",
+   "label": "Event Discount (%)",
+   "default": 0
+  },
+  {
+   "fieldname": "f_and_b_discount",
+   "fieldtype": "Percent",
+   "label": "F&B Discount (%)",
+   "default": 0
+  },
+  {
+   "fieldname": "guest_privileges",
+   "fieldtype": "Text",
+   "label": "Guest Privileges"
+  },
+  {
+   "fieldname": "credit_limit",
+   "fieldtype": "Currency",
+   "label": "Credit Limit (AED)",
+   "options": "AED",
+   "default": 0
+  },
+  {
+   "fieldname": "renewal_settings",
+   "fieldtype": "Section Break",
+   "label": "Renewal Settings"
+  },
+  {
+   "fieldname": "renewal_reminder_days",
+   "fieldtype": "Table",
+   "label": "Renewal Reminder Days",
+   "options": "Renewal Reminder"
+  },
+  {
+   "fieldname": "grace_period_days",
+   "fieldtype": "Int",
+   "label": "Grace Period Days",
+   "default": 30
+  },
+  {
+   "fieldname": "suspension_rules",
+   "fieldtype": "Text",
+   "label": "Suspension Rules"
+  },
+  {
+   "fieldname": "system_section",
+   "fieldtype": "Section Break",
+   "label": "System Settings"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": 1
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modified_by",
+   "fieldtype": "Data",
+   "label": "Modified By",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-06 14:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Social Club Management",
+ "name": "Membership Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Membership Coordinator",
+   "share": 1,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

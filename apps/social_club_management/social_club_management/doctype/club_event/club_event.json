@@ -1,0 +1,274 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-06 14:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "event_details_section",
+  "event_name",
+  "event_type",
+  "description",
+  "start_date",
+  "start_time",
+  "end_date",
+  "end_time",
+  "venue",
+  "capacity_section",
+  "max_capacity",
+  "current_registrations",
+  "available_spots",
+  "pricing_section",
+  "member_fee",
+  "non_member_fee",
+  "vip_fee",
+  "registration_section",
+  "registration_deadline",
+  "cancellation_deadline",
+  "allow_guest_registration",
+  "guest_fee",
+  "waitlist_settings",
+  "enable_waitlist",
+  "waitlist_capacity",
+  "status_section",
+  "event_status",
+  "is_published",
+  "system_section",
+  "created_by",
+  "modified_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "event_details_section",
+   "fieldtype": "Section Break",
+   "label": "Event Details"
+  },
+  {
+   "fieldname": "event_name",
+   "fieldtype": "Data",
+   "label": "Event Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_type",
+   "fieldtype": "Select",
+   "label": "Event Type",
+   "options": "Social\nSports\nCultural\nEducational\nBusiness\nFundraiser\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "venue",
+   "fieldtype": "Data",
+   "label": "Venue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "capacity_section",
+   "fieldtype": "Section Break",
+   "label": "Capacity Management"
+  },
+  {
+   "fieldname": "max_capacity",
+   "fieldtype": "Int",
+   "label": "Maximum Capacity",
+   "reqd": 1,
+   "default": 50
+  },
+  {
+   "fieldname": "current_registrations",
+   "fieldtype": "Int",
+   "label": "Current Registrations",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "available_spots",
+   "fieldtype": "Int",
+   "label": "Available Spots",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "member_fee",
+   "fieldtype": "Currency",
+   "label": "Member Fee (AED)",
+   "options": "AED",
+   "default": 0
+  },
+  {
+   "fieldname": "non_member_fee",
+   "fieldtype": "Currency",
+   "label": "Non-Member Fee (AED)",
+   "options": "AED",
+   "default": 0
+  },
+  {
+   "fieldname": "vip_fee",
+   "fieldtype": "Currency",
+   "label": "VIP Fee (AED)",
+   "options": "AED",
+   "default": 0
+  },
+  {
+   "fieldname": "registration_section",
+   "fieldtype": "Section Break",
+   "label": "Registration Settings"
+  },
+  {
+   "fieldname": "registration_deadline",
+   "fieldtype": "Datetime",
+   "label": "Registration Deadline"
+  },
+  {
+   "fieldname": "cancellation_deadline",
+   "fieldtype": "Datetime",
+   "label": "Cancellation Deadline"
+  },
+  {
+   "fieldname": "allow_guest_registration",
+   "fieldtype": "Check",
+   "label": "Allow Guest Registration",
+   "default": 0
+  },
+  {
+   "fieldname": "guest_fee",
+   "fieldtype": "Currency",
+   "label": "Guest Fee (AED)",
+   "options": "AED",
+   "default": 0
+  },
+  {
+   "fieldname": "waitlist_settings",
+   "fieldtype": "Section Break",
+   "label": "Waitlist Settings"
+  },
+  {
+   "fieldname": "enable_waitlist",
+   "fieldtype": "Check",
+   "label": "Enable Waitlist",
+   "default": 1
+  },
+  {
+   "fieldname": "waitlist_capacity",
+   "fieldtype": "Int",
+   "label": "Waitlist Capacity",
+   "default": 20
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Event Status"
+  },
+  {
+   "fieldname": "event_status",
+   "fieldtype": "Select",
+   "label": "Event Status",
+   "options": "Draft\nPublished\nFull\nCancelled\nCompleted",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published",
+   "default": 0
+  },
+  {
+   "fieldname": "system_section",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modified_by",
+   "fieldtype": "Data",
+   "label": "Modified By",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-06 14:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Social Club Management",
+ "name": "Club Event",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Event Coordinator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 0,
+   "role": "Member",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

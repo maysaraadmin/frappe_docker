@@ -1,0 +1,259 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-06 14:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "booking_details_section",
+  "member",
+  "facility",
+  "booking_date",
+  "booking_datetime",
+  "end_datetime",
+  "duration_hours",
+  "purpose",
+  "pricing_section",
+  "rate_applied",
+  "total_amount",
+  "vat_amount",
+  "grand_total",
+  "invoice",
+  "payment_section",
+  "payment_status",
+  "payment_method",
+  "payment_date",
+  "status_section",
+  "status",
+  "cancellation_reason",
+  "cancellation_fee",
+  "refund_amount",
+  "system_section",
+  "created_by",
+  "modified_by",
+  "creation_date",
+  "modified_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "booking_details_section",
+   "fieldtype": "Section Break",
+   "label": "Booking Details"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Club Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "facility",
+   "fieldtype": "Link",
+   "label": "Facility",
+   "options": "Facility",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_date",
+   "fieldtype": "Date",
+   "label": "Booking Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_datetime",
+   "fieldtype": "Datetime",
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_datetime",
+   "fieldtype": "Datetime",
+   "label": "End Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration_hours",
+   "fieldtype": "Float",
+   "label": "Duration (Hours)",
+   "reqd": 1,
+   "default": 1
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Data",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "rate_applied",
+   "fieldtype": "Currency",
+   "label": "Rate Applied (AED)",
+   "options": "AED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount (AED)",
+   "options": "AED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vat_amount",
+   "fieldtype": "Currency",
+   "label": "VAT Amount (AED)",
+   "options": "AED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total (AED)",
+   "options": "AED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Information"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Pending\nPaid\nFailed\nRefunded",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nCard\nBank Transfer\nOnline Payment\nMember Account"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Datetime",
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nConfirmed\nCancelled\nCompleted",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "cancellation_reason",
+   "fieldtype": "Text",
+   "label": "Cancellation Reason"
+  },
+  {
+   "fieldname": "cancellation_fee",
+   "fieldtype": "Currency",
+   "label": "Cancellation Fee (AED)",
+   "options": "AED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "refund_amount",
+   "fieldtype": "Currency",
+   "label": "Refund Amount (AED)",
+   "options": "AED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "system_section",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modified_by",
+   "fieldtype": "Data",
+   "label": "Modified By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modified_date",
+   "fieldtype": "Datetime",
+   "label": "Modified Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-06 14:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Social Club Management",
+ "name": "Facility Booking",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Facility Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 0,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 0,
+   "role": "Member",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

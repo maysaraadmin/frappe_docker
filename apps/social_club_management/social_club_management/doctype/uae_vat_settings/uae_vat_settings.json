@@ -1,0 +1,242 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-06 14:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "vat_configuration_section",
+  "company_trn",
+  "vat_rate",
+  "vat_account",
+  "vat_payable_account",
+  "vat_receivable_account",
+  "reverse_charge_account",
+  "tax_templates_section",
+  "standard_tax_template",
+  "zero_rated_tax_template",
+  "exempt_tax_template",
+  "reverse_charge_tax_template",
+  "reporting_section",
+  "vat_period",
+  "filing_frequency",
+  "last_filing_date",
+  "next_filing_date",
+  "compliance_section",
+  "auto_generate_vat_returns",
+  "send_vat_reminders",
+  "reminder_days_before_filing",
+  "integration_section",
+  "fta_portal_username",
+  "fta_api_key",
+  "auto_submit_to_fta",
+  "system_section",
+  "created_by",
+  "modified_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "vat_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "VAT Configuration"
+  },
+  {
+   "fieldname": "company_trn",
+   "fieldtype": "Data",
+   "label": "Company TRN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vat_rate",
+   "fieldtype": "Percent",
+   "label": "VAT Rate (%)",
+   "reqd": 1,
+   "default": 5
+  },
+  {
+   "fieldname": "vat_account",
+   "fieldtype": "Link",
+   "label": "VAT Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vat_payable_account",
+   "fieldtype": "Link",
+   "label": "VAT Payable Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vat_receivable_account",
+   "fieldtype": "Link",
+   "label": "VAT Receivable Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reverse_charge_account",
+   "fieldtype": "Link",
+   "label": "Reverse Charge Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "tax_templates_section",
+   "fieldtype": "Section Break",
+   "label": "Tax Templates"
+  },
+  {
+   "fieldname": "standard_tax_template",
+   "fieldtype": "Link",
+   "label": "Standard Rated Tax Template",
+   "options": "Sales Taxes and Charges Template"
+  },
+  {
+   "fieldname": "zero_rated_tax_template",
+   "fieldtype": "Link",
+   "label": "Zero Rated Tax Template",
+   "options": "Sales Taxes and Charges Template"
+  },
+  {
+   "fieldname": "exempt_tax_template",
+   "fieldtype": "Link",
+   "label": "Exempt Tax Template",
+   "options": "Sales Taxes and Charges Template"
+  },
+  {
+   "fieldname": "reverse_charge_tax_template",
+   "fieldtype": "Link",
+   "label": "Reverse Charge Tax Template",
+   "options": "Purchase Taxes and Charges Template"
+  },
+  {
+   "fieldname": "reporting_section",
+   "fieldtype": "Section Break",
+   "label": "VAT Reporting"
+  },
+  {
+   "fieldname": "vat_period",
+   "fieldtype": "Select",
+   "label": "VAT Period",
+   "options": "Monthly\nQuarterly",
+   "reqd": 1,
+   "default": "Quarterly"
+  },
+  {
+   "fieldname": "filing_frequency",
+   "fieldtype": "Select",
+   "label": "Filing Frequency",
+   "options": "Monthly\nQuarterly",
+   "reqd": 1,
+   "default": "Quarterly"
+  },
+  {
+   "fieldname": "last_filing_date",
+   "fieldtype": "Date",
+   "label": "Last Filing Date"
+  },
+  {
+   "fieldname": "next_filing_date",
+   "fieldtype": "Date",
+   "label": "Next Filing Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "compliance_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance Settings"
+  },
+  {
+   "fieldname": "auto_generate_vat_returns",
+   "fieldtype": "Check",
+   "label": "Auto Generate VAT Returns",
+   "default": 1
+  },
+  {
+   "fieldname": "send_vat_reminders",
+   "fieldtype": "Check",
+   "label": "Send VAT Reminders",
+   "default": 1
+  },
+  {
+   "fieldname": "reminder_days_before_filing",
+   "fieldtype": "Int",
+   "label": "Reminder Days Before Filing",
+   "default": 7
+  },
+  {
+   "fieldname": "integration_section",
+   "fieldtype": "Section Break",
+   "label": "FTA Integration"
+  },
+  {
+   "fieldname": "fta_portal_username",
+   "fieldtype": "Data",
+   "label": "FTA Portal Username"
+  },
+  {
+   "fieldname": "fta_api_key",
+   "fieldtype": "Password",
+   "label": "FTA API Key"
+  },
+  {
+   "fieldname": "auto_submit_to_fta",
+   "fieldtype": "Check",
+   "label": "Auto Submit to FTA",
+   "default": 0
+  },
+  {
+   "fieldname": "system_section",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modified_by",
+   "fieldtype": "Data",
+   "label": "Modified By",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-06 14:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Social Club Management",
+ "name": "UAE VAT Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Finance Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

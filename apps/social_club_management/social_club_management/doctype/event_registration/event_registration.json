@@ -1,0 +1,293 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-06 14:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "registration_details_section",
+  "event",
+  "member",
+  "registration_date",
+  "registration_time",
+  "number_of_guests",
+  "guest_names",
+  "pricing_section",
+  "member_fee",
+  "guest_fee",
+  "total_fee",
+  "vat_amount",
+  "grand_total",
+  "invoice",
+  "payment_section",
+  "payment_status",
+  "payment_method",
+  "payment_date",
+  "ticket_section",
+  "ticket_number",
+  "qr_code",
+  "ticket_sent",
+  "status_section",
+  "status",
+  "cancellation_reason",
+  "refund_amount",
+  "waitlist_section",
+  "waitlist_position",
+  "spot_offered_date",
+  "spot_confirmation_deadline",
+  "system_section",
+  "created_by",
+  "modified_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "registration_details_section",
+   "fieldtype": "Section Break",
+   "label": "Registration Details"
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "label": "Event",
+   "options": "Club Event",
+   "reqd": 1
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Club Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date",
+   "reqd": 1,
+   "default": "Today"
+  },
+  {
+   "fieldname": "registration_time",
+   "fieldtype": "Time",
+   "label": "Registration Time",
+   "reqd": 1,
+   "default": "Now"
+  },
+  {
+   "fieldname": "number_of_guests",
+   "fieldtype": "Int",
+   "label": "Number of Guests",
+   "default": 0
+  },
+  {
+   "fieldname": "guest_names",
+   "fieldtype": "Text",
+   "label": "Guest Names"
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "member_fee",
+   "fieldtype": "Currency",
+   "label": "Member Fee (AED)",
+   "options": "AED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "guest_fee",
+   "fieldtype": "Currency",
+   "label": "Guest Fee (AED)",
+   "options": "AED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_fee",
+   "fieldtype": "Currency",
+   "label": "Total Fee (AED)",
+   "options": "AED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vat_amount",
+   "fieldtype": "Currency",
+   "label": "VAT Amount (AED)",
+   "options": "AED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total (AED)",
+   "options": "AED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Information"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Pending\nPaid\nFailed\nRefunded",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nCard\nBank Transfer\nOnline Payment\nMember Account"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Datetime",
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "ticket_section",
+   "fieldtype": "Section Break",
+   "label": "Ticket Information"
+  },
+  {
+   "fieldname": "ticket_number",
+   "fieldtype": "Data",
+   "label": "Ticket Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Attach",
+   "label": "QR Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ticket_sent",
+   "fieldtype": "Check",
+   "label": "Ticket Sent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Registered\nWaitlisted\nConfirmed\nCancelled\nChecked-In",
+   "default": "Registered"
+  },
+  {
+   "fieldname": "cancellation_reason",
+   "fieldtype": "Text",
+   "label": "Cancellation Reason"
+  },
+  {
+   "fieldname": "refund_amount",
+   "fieldtype": "Currency",
+   "label": "Refund Amount (AED)",
+   "options": "AED",
+   "read_only": 1
+  },
+  {
+   "fieldname": "waitlist_section",
+   "fieldtype": "Section Break",
+   "label": "Waitlist Information"
+  },
+  {
+   "fieldname": "waitlist_position",
+   "fieldtype": "Int",
+   "label": "Waitlist Position",
+   "read_only": 1
+  },
+  {
+   "fieldname": "spot_offered_date",
+   "fieldtype": "Datetime",
+   "label": "Spot Offered Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "spot_confirmation_deadline",
+   "fieldtype": "Datetime",
+   "label": "Spot Confirmation Deadline",
+   "read_only": 1
+  },
+  {
+   "fieldname": "system_section",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modified_by",
+   "fieldtype": "Data",
+   "label": "Modified By",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-06 14:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Social Club Management",
+ "name": "Event Registration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Event Coordinator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 0,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 0,
+   "role": "Member",
+   "share": 0,
+   "write": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
